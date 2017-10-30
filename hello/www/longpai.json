@@ -1,0 +1,20 @@
+{
+  "posts": [
+    {
+      "id": 6,
+      "postby": "NACHAT - SRT ",
+      "location": "Kho Sa Mui , Suratthani ",
+      "comment": "Nice Sea , Nice Food  ",
+      "avatar": "https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/21751613_677028805835648_5400509616704569925_n.jpg?oh=1fd47a59bcaa67047af9f2b7925b49d0&oe=5AA96722 ",
+      "picture": "http://phuketairportthai.com/imagetemplate/2087cover%20bangpor.jpg "
+    },
+    {
+      "postby": "น้องหมีไอดิน",
+      "location": "สตูล ซีฟู้ด , สตูล",
+      "comment": "อาหารอร่อย ขนาดกินจุแบบผมยังอิ่มท้อง มากินกันครับ",
+      "avatar": "https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/19225806_1427055464009442_4382054943234674850_n.jpg?oh=afad712c6485fdb370b618209e88f7ca&oe=5A6D36FB",
+      "picture": "https://scontent.fbkk10-1.fna.fbcdn.net/v/t1.0-9/20245474_1464297983618523_8695512242726288392_n.jpg?oh=a60030ee0a710b6b3993f825820942b1&oe=5AA7E7B2",
+      "id": 7
+    }
+  ]
+}

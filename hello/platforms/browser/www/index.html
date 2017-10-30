@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
+    <link rel="stylesheet" href="css/onsenui.css">
+    <link rel="stylesheet" href="css/onsen-css-components.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/onsenui.min.js"></script>
+    <script src="js/cordova.js"></script>
+    <script src="js/index2.js"></script>
+    <script src="js/index.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    <script>
+        function initMap() {
+            document.addEventListener("init", function (event) {
+                myMap();
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjdNfJ3PB8sehpRknmnAB6rXpxTSHeBzg&callback=initMap"></script>
+    <script id="template" type="x-tmpl-mustache">
+        <ons-button class="option-arrow" modifier="quiet" onclick="ons.openActionSheet({
+                cancelable: true,
+                    buttons: [
+                        'Delete',
+                        {
+                            label: 'Cancel',
+                            icon: 'md-close'
+                        }
+                    ]
+                }).then(function (index) { 
+                    if(index===0){
+                        deletePin({{id}});
+                    } 
+                })">
+            <ons-icon icon="ion-close-round"></ons-icon>
+        </ons-button><br>
+        <div class="tweet-header">
+            <span class="list-item__title"><U><b>{{buliding}}&nbsp;#{{room}}</b></U></span>
+            <span id="dateCss" class="list-item__subtitle">{{day}}/{{month}}/{{year}}&nbsp;&nbsp;&nbsp;{{timeline}}</span>
+            <span class="list-item__content"><h4><ons-icon id="des" size "20px" icon="ion-paperclip"></ons-icon>{{description}}</h4></span>
+            <img src="{{photo}}" style="width:100%">
+        </div>
+        <br>
+        <hr>
+    </script>
+</head>
+
+<body>
+    <div id="test">test</div>
+    <img src="" alt="">
+    <ons-page ng-controller="yourController">
+        <ons-toolbar>
+            <div class="center">
+                <ons-icon class="set" icon="ion-aperture" id="iconHead" size="25px"></ons-icon>
+                <b id="head">PSU Pin</b>
+            </div>
+        </ons-toolbar>
+        <ons-tabbar swipeable position="auto">
+            <ons-tab page="post.html" id="news" label="News" icon="ion-ios-clock" badge="" active></ons-tab>
+            <ons-tab page="addPic.html" label="Post" icon="ion-camera" active-icon="ion-camera"></ons-tab>
+            <ons-tab page="mapPin.html" label="Map" icon="ion-ios-location" active-icon="ion-ios-location"></ons-tab>
+        </ons-tabbar>
+    </ons-page>
+
+    <template id="post.html">
+        <ons-page id="post">
+            <div id="pin"></div>
+        </ons-page>
+    </template>
+
+    <template id="addPic.html">
+        <ons-page id="addPic">
+            <div class="center" id="containerContent">
+                <div class="row">
+                    <img src="img\camera.png" style="width:100%" id="preview">
+                </div>
+                <div class="row">
+                    <ons-button modifier="large">
+                        <ons-icon id="takephoto" icon="ion-ios-camera" class="center" size="50px"></ons-icon>
+                    </ons-button>
+                </div>
+                <div class="row">
+                    <ons-icon class="set" icon="ion-ios-pricetags" size="20px"></ons-icon>
+                    <ons-select id="choose-sel" onchange="editSelects(event)" class="size">
+                        <option value="Buliding1">Buliding1</option>
+                        <option value="Buliding1A">Buliding1A</option>
+                        <option value="Buliding5">Buliding5</option>
+                        <option value="Buliding6">Buliding6</option>
+                    </ons-select>
+                </div>
+                <div class="row">
+                    <ons-icon class="set" icon="ion-ios-pricetags" size="20px"></ons-icon>
+                    <ons-input class="size" id="room" modifier="underbar" placeholder="Room" float></ons-input>
+                </div>
+                <div class="row">
+                    <ons-icon class="set" icon="ion-ios-compose" size="20px"></ons-icon>
+                    <ons-input class="size" id="desc" modifier="underbar" placeholder="Description" float></ons-input>
+                </div>
+            </div>
+            <ons-fab position="bottom right" id="addPin">
+                <ons-icon icon="ion-checkmark"></ons-icon>
+            </ons-fab>
+        </ons-page>
+    </template>
+
+    <template id="mapPin.html">
+        <ons-page id="mapPin">
+            <div id="googleMap">Map error</div>
+        </ons-page>
+    </template>
+
+
+</body>
+
+</html>
