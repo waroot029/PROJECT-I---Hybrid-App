@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>VideoShare+</title>
+<!-- custom-theme -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Hair Style Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //custom-theme -->
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- js -->
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<!-- //js -->
+<link href='css/simplelightbox.min.css' rel='stylesheet' type='text/css'>
+<!-- font-awesome-icons -->
+<link href="css/font-awesome.css" rel="stylesheet">
+<!-- // link mustache -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+<!-- // link JS-->
+<script src="js/index.js"></script>
+<!-- // link map-->
+<script src="js/map.js"></script>
+<style>
+	#map {
+		height: 100%;
+	}
+	/* Optional: Makes the sample page fill the window. */
+	html, body {
+		height: 90%;
+		margin: 0;
+		padding: 0;
+	}
+</style>
+</head>
+<script id="template" type="x-tmpl-mustache">
+<div id="posts{{id}}">
+<div class="agileits_banner_bottom_grid_three">
+	<div class="col-md-4 agileinfo_banner_bottom_grid_three_left">
+		<div class="wthree_banner_bottom_grid_three_left1 grid">
+			<figure class="effect-roxy">
+				<img src="{{picture}}" alt=" " class="img-responsive" />
+				<figcaption>
+					<h3>{{nameuser}} <span>+</span></h3>
+				</figcaption>
+			</figure>
+		</div>
+		<iframe width="300" height="320"
+		src="http://www.youtube.com/embed/{{namesong}}?modestbranding=1"
+		frameborder="0" allowfullscreen="fase">
+	</iframe>
+	<p class="w3_agileits_para"><label id="feeling{{id}}">{{feeling}}</label></p>
+	<input type="hidden"  id="feelingedit{{id}}" value="{{feeling}} "> </input>
+	<input type="hidden"  id="nameuser{{id}}" value="{{nameuser}} " readonly> </input>
+	<input type="hidden"  id="picture{{id}}" value="{{picture}} " readonly> </input>
+	<input type="hidden"  id="namesong{{id}}" value="{{namesong}} " readonly> </input>
+	</div>
+	<div class="clearfix"> </div>
+</div>
+</div>
+<br>
+<center>
+<button id="remove" class="btn btn-danger" onclick='deletepost({{id}})'>Remove </button>
+<button  id="edit" class="btn btn-warning" onclick='editpost({{id}})'>Edit</button>
+<button id="save" class ="btn btn-success" onclick='savepost({{id}})'>Save </button>
+</center>
+</div>
+</script>
+<body>
+<!-- หน้าปกบนสุด -->
+	<div id="home" class="banner">
+		<div class="container">
+			<div class="w3_agile_logo">
+				<h1><a href="index.html"><span>VIDEO</span> SHARE+</a></h1>
+			</div>
+			<div class="w3layouts_menu">
+				<nav class="cd-stretchy-nav edit-content">
+					<a class="cd-nav-trigger" href="#0"> Menu <span aria-hidden="true"></span> </a>
+					<ul>
+						<li><a href="#home" class="scroll"><span>Home</span></a></li>
+						<li><a href="#about" class="scroll"><span>about</span></a></li>
+						<li><a href="#feed" class="scroll"><span>feed</span></a></li>
+						<li><a href="#map" class="scroll"><span>map</span></a></li>
+					</ul>
+					<span aria-hidden="true" class="stretchy-nav-bg"></span>
+				</nav>
+			</div>
+			<div class="agile_banner_info">
+				<h2><span class="d4">MOBLIE</span> <i>Hybrid App</i></h2>
+				<p><br><br></p>
+			</div>
+			<div class="agileits_w3layouts_call_mail">
+				<ul>
+				</ul>
+			</div>
+			<div class="w3_agileits_banner_social_icons_pos">
+				<ul class="agileits_social_list">
+					<li><a href="https://www.facebook.com/WrSwop" class="w3_agile_facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.youtube.com/user/Ta0jeAwTz/videos?view_as=subscriber" class="agile_twitter"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+					<li><a href="https://github.com/waroot029" class="w3_agile_dribble"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+					<li><a href="https://www.instagram.com/taojeaw_wr/" class="w3_agile_vimeo"><i class="fa fa-instagram " aria-hidden="true"></i></a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+<!-- //banner -->
+<!-- ที่เว้นว่าง รูป drafpunk  -->
+	<div class="schedule2">
+		<div class="container">
+				<br>
+				<br>
+				<br>
+		</div>
+	</div>
+
+<!--  คำอธิบายเกี่ยวกับแอพ -->
+	<div id="about" class="banner-bottom">
+		<div class="container">
+			<div class="w3_banner_bottom_grid_pos">
+				<div class="w3_banner_bottom_grid">
+					<h3>MOBLIE APP</h3>
+				</div>
+			</div>
+			<div class="w3ls_banner_bottom_grid1">
+				<div class="col-md-10 w3l_banner_bottom_right">
+					<h3>Welcome to <span><i>VIDEO</i> SHARE+</span></h3>
+					<p>&nbsp;&nbsp;&nbsp; If, you have your favorite video ..  Let's  Share give your special person at here ! </p>
+					<p>&nbsp;&nbsp;&nbsp; I hope , you enjoy this app .. Thankyou
+				</div>
+				<div class="col-md-6 w3l_banner_bottom_left">
+					<img src="images/6.png" alt=" " class="img-responsive" />
+				</div>
+				<div class="clearfix"> </div>
+				<br>
+				<br>
+			</div>
+	</div>
+<!-- //banner-bottom -->
+<!-- ที่ว่าง รูป daft punk -->
+	<div class="schedule">
+		<div class="container">
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+		</div>
+	</div>
+
+<!-- กรอบสีแดง + รูปกรรไกร -->
+	<div class="schedule-bottom">
+		<div class="col-md-15 agileits_schedule_bottom_right">
+			<div class="w3ls_schedule_bottom_right_grid">
+<!-- link นี่คือตัวเชื่อมไปยัง small-dialog หรือก็คือที่กรอกข้อมูลต่างๆ -->
+<center>
+				<div class="wthree_more">
+					<a href="#small-dialog" class="popup-with-zoom-anim button--wayra button--border-thick button--text-upper button--size-s">CLICK TO ADD</a>
+				</div>
+</center>
+    <!-- ปิด -->
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+
+<!-- stats -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.countup.js"></script>
+	<script>
+		$('.counter').countUp();
+	</script>
+
+<!-- POPUP ที่ไว้ insert ข้อมูล -->
+	<div id="small-dialog" class="mfp-hide">
+		<div class="w3layouts_payment_online_form">
+			<form action="#" method="post">
+				<h4>ADD YOUR  FEELING !</h4>
+							<!--JS ที่ใช้แปลง BASE 64 -->
+				<ul>
+							<center>
+							<textarea id="picture" style="display:none;"></textarea>
+							<br>
+							<img id="img" height="150">
+							<input id="inp" type='file'>
+							</center>
+							<script type="text/javascript">
+							function readFile() {
+								var url = "http://localhost:3000/posts"
+								if (this.files && this.files[0]) {
+									var FR= new FileReader();
+									FR.addEventListener("load", function(e) {
+										document.getElementById("inp").files[0].fileSize;  <!--//ทำให้มันไม่ขึ้น  C:\fakepath-->
+										document.getElementById("img").src       = e.target.result;
+										document.getElementById("picture").innerHTML = e.target.result;
+									});
+									FR.readAsDataURL( this.files[0] );
+								}
+							}
+							document.getElementById("inp").addEventListener("change", readFile);
+							</script>
+				</ul>
+				<ul>
+					<li><input class="w3l_text_box" placeholder="NAME" type="text" required="" id="nameuser"></li></input>
+					<li><input class="w3l_text_box" placeholder="URL YOUTUBE (Copy เฉพาะด้านหลังจาก watch?v= ) "  type="text" required="" id="namesong"></li></input>
+					<li><input class="w3l_text_box" placeholder="www.youtube.com/watch?v=  // UOOQWrrZDgY  " readonly></li></input>
+
+				</ul>
+				<ul>
+					<li class="w3ls_address"><input class="w3l_text_box" placeholder="YOUR FEELING ?" name="Address" type="text" required="" id="feeling"></li>
+				</ul>
+				<ul>
+					    <button id="takephoto" size="50px">Take Photo</ons-icon>
+				</ul>
+				<ul class="w3_payment_sendbtns">
+					<li><input type="reset" value="RESET" ></li>
+					<li><input type="submit" value="SUBMIT" id="addfeeling"></li>
+				</ul>
+				<div class="clearfix"> </div>
+			</form>
+		</div>
+	</div>
+
+<!-- ดึง ข้อมูลมาแสดง-->
+	<div id="feed" class="team">
+		<div class="container">
+			<div class="agileits_w3layouts_schedule">
+				<h3>FEED OF MUSIC SHARE+</h3>
+				<img src="images/1.png" alt=" " class="img-responsive" />
+			</div>
+			<div class="w3_agile_team_grids">
+							<div id = "posts"></div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+<div id="map" class="banner">
+<!-- map -->
+	<div id="map"></div>
+	<script async defer
+	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDp0qykW_wdGdCk3Io1ZoO--2F7APAO6Vs&callback=initMap">
+	</script>
+<!-- //map -->
+</div>
+<!-- footer -->
+	<div class="w3_agile_footer">
+		<div class="container">
+			<p>977-341 Mobile App Project I : Hybrid App <br> | Design by Waroot Suwanopard</p>
+			<div class="arrow-container animated fadeInDown">
+				<a href="#home" class="arrow-2 scroll">
+					<i class="fa fa-angle-up"></i>
+				</a>
+				<div class="arrow-1 animated hinge infinite zoomIn"></div>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+<!-- text-effect -->
+	<script type="text/javascript" src="js/jquery.transit.js"></script>
+	<script type="text/javascript" src="js/jquery.textFx.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.d4').textFx({
+				type: 'slideIn',
+				direction: 'left',
+				iChar: 250,
+				iAnim: 1000
+			});
+		});
+	</script>
+<!-- //text-effect -->
+<!-- menu-js -->
+	<script src="js/modernizr.js"></script>
+	<script src="js/menu.js"></script>
+<!-- //menu-js -->
+<!-- pop-up-box -->
+	<script src="js/jquery.magnific-popup.js" type="text/javascript"></script>
+	<script>
+		$(document).ready(function() {
+		$('.popup-with-zoom-anim').magnificPopup({
+			type: 'inline',
+			fixedContentPos: false,
+			fixedBgPos: true,
+			overflowY: 'auto',
+			closeBtnInside: true,
+			preloader: false,
+			midClick: true,
+			removalDelay: 300,
+			mainClass: 'my-mfp-zoom-in'
+		});
+
+		});
+	</script>
+<!-- //pop-up-box -->
+<!-- for bootstrap working -->
+	<script src="js/bootstrap.js"></script>
+<!-- //for bootstrap working -->
+<!-- start-smooth-scrolling -->
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+	</script>
+<!-- start-smooth-scrolling -->
+</body>
+</html>
